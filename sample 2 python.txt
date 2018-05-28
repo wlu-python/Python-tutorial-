@@ -1,0 +1,37 @@
+#
+#Puzzle #1
+#
+
+def sumitup(a, b):
+    return a + b
+x=2
+y=3
+z= sumitup(x,y)
+print ("x=%i, y=%i, z=%i" %(x,y,z))
+#
+#Puzzle #2
+#
+yy=[]
+for xx in range(0,100,5):
+  yy.append(xx)
+print(yy)
+#
+#Puzzle #3
+#
+print("the number of elements(a.k.a. length) in yy is %i" % (len(yy)))
+for xx in range(19,-1,-1):
+  print(yy[xx])
+
+#
+#Puzzle #4
+#
+
+#make an array of 20 random numbers
+#sort them
+#print the array
+
+#
+#Puzzle #5 
+#
+#Take the array in puzzle #4 and remove duplicates
+#report the number of elements remaining
