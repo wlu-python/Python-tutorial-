@@ -1,0 +1,24 @@
+poem= open("poem.txt", "r")
+import random
+x = 0
+
+lines = ""
+y = 0 
+for z in poem: 
+  if z == "%\n":
+    y = y+1
+
+poem.close()
+target = random.randint(0,y-1)
+
+poem= open("poem.txt", "r")
+while x< target : 
+  lines = poem.readline() 
+  if lines == "%\n":
+     x = x+1
+lines = "" 
+while lines != "%\n": 
+  lines = poem.readline() 
+  if lines !="%\n":
+    print (lines)
+
