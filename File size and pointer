@@ -1,0 +1,51 @@
+
+
+poem= open("poem.txt", "r")
+import random
+x = 0
+
+lines = ""
+y = 0 
+for z in poem: 
+  if z == "%\n":
+    y = y+1
+
+poem.close()
+target = random.randint(0,y-1)
+
+poem= open("poem.txt", "r")
+while x< target : 
+  lines = poem.readline() 
+  if lines == "%\n":
+     x = x+1
+lines = "" 
+while lines != "%\n": 
+  lines = poem.readline() 
+  if lines !="%\n":
+    print (lines)
+
+poem.close()
+#don't looop through every single line. random access to the file of the file. First seek the file, and then find. Get the file size   
+poem = open("poem.txt", "r+")
+Old_file_position = poem.tell()
+poem.seek(0,0) 
+size = poem.tell()
+
+def file_size(fname):
+        import os
+        statinfo = os.stat(fname)
+        return statinfo.st_size
+
+print("File size in bytes of a plain file: ",file_size("poem.txt"))
+
+import random
+x = 0
+
+lines = ""
+y = 0 
+for z in poem: 
+  if z == "%\n":
+    y = y+1
+
+
+poem.read() 
